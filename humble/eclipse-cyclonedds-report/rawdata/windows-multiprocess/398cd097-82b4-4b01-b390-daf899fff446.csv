@@ -1,0 +1,47 @@
+Experiment id: 96d63652-b24f-4891-b250-726aa826068b
+Performance Test Version: 
+Logfile name: 398cd097-82b4-4b01-b390-daf899fff446.csv
+Communication mean: RCLCPP_SINGLE_THREADED_EXECUTOR
+RMW Implementation: rmw_cyclonedds_cpp
+DDS domain id: 0
+QOS: Reliability: RELIABLE Durability: VOLATILE History kind: KEEP_LAST History depth: 100 Sync. pub/sub: 0
+Publishing rate: 500
+Topic name: PointCloud4m
+Msg name: PointCloud4m
+Maximum runtime (sec): 30
+Number of publishers: 0
+Number of subscribers: 3
+Memory check enabled: 0
+Use single participant: 0
+With security: 0
+Zero copy transfer: 0
+Roundtrip Mode: NONE
+Ignore seconds from beginning: 5
+
+---EXPERIMENT-START---
+T_experiment,	T_loop,	received,	sent,	lost,	relative_loss,	data_received,	latency_min (ms),	latency_max (ms),	latency_mean (ms),	latency_variance (ms),	pub_loop_res_min (ms),	pub_loop_res_max (ms),	pub_loop_res_mean (ms),	pub_loop_res_variance (ms),	sub_loop_res_min (ms),	sub_loop_res_max (ms),	sub_loop_res_mean (ms),	sub_loop_res_variance (ms),	ru_utime,	ru_stime,	ru_maxrss,	ru_ixrss,	ru_idrss,	ru_isrss,	ru_minflt,	ru_majflt,	ru_nswap,	ru_inblock,	ru_oublock,	ru_msgsnd,	ru_msgrcv,	ru_nsignals,	ru_nvcsw,	ru_nivcsw,	cpu_usage (%)
+6.045217,		1.011317,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099026,		0,		0,		0,		0,		0,		0,		0,		0,		0
+7.046328,		1.001029,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099036,		0,		0,		0,		0,		0,		0,		0,		0,		0
+8.049546,		1.003165,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099038,		0,		0,		0,		0,		0,		0,		0,		0,		0
+9.065173,		1.015583,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099038,		0,		0,		0,		0,		0,		0,		0,		0,		0
+10.066367,		1.001152,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099038,		0,		0,		0,		0,		0,		0,		0,		0,		0
+11.069790,		1.003387,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099038,		0,		0,		0,		0,		0,		0,		0,		0,		0
+12.070831,		1.001003,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099038,		0,		0,		0,		0,		0,		0,		0,		0,		0
+13.072975,		1.002101,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3099038,		0,		0,		0,		0,		0,		0,		0,		0,		0
+14.074244,		1.001234,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+15.089854,		1.015559,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+16.096664,		1.006755,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+17.100679,		1.003944,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+18.102972,		1.002252,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+19.105190,		1.002176,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+20.106285,		1.001022,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+21.106901,		1.000577,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+22.109180,		1.002223,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+23.110279,		1.001064,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+24.114635,		1.004281,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+25.130260,		1.015574,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+26.134871,		1.004566,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+27.137039,		1.002113,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+28.138138,		1.001046,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+29.142944,		1.004745,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102137,		0,		0,		0,		0,		0,		0,		0,		0,		0
+30.144033,		1.001048,		0,		0,		0,		-nan(ind),		0,		inf,		-inf,		-nan(ind),		-nan(ind),		inf,		-inf,		0,		0,		0,		0,		0,		0,		2343750000,		4078125000,		403156,		0,		0,		0,		0,		3102145,		0,		0,		0,		0,		0,		0,		0,		0,		0

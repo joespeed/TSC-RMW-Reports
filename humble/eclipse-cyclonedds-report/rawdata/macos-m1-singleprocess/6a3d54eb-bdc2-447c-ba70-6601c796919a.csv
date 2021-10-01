@@ -1,0 +1,29 @@
+Experiment id: d2105e8d-1a9a-41ef-a998-0d3aa6a774fc
+Performance Test Version: 2fc8cc2-dirty
+Logfile name: 6a3d54eb-bdc2-447c-ba70-6601c796919a.csv
+Communication mean: RCLCPP_SINGLE_THREADED_EXECUTOR
+RMW Implementation: rmw_fastrtps_cpp
+DDS domain id: 0
+QOS: Reliability: RELIABLE Durability: VOLATILE History kind: KEEP_LAST History depth: 100 Sync. pub/sub: 0
+Publishing rate: 0
+Topic name: PointCloud4m
+Msg name: PointCloud4m
+Maximum runtime (sec): 30
+Number of publishers: 1
+Number of subscribers: 10
+Memory check enabled: 0
+Use single participant: 0
+With security: 0
+Zero copy transfer: 0
+Roundtrip Mode: NONE
+Ignore seconds from beginning: 5
+
+---EXPERIMENT-START---
+T_experiment,	T_loop,	received,	sent,	lost,	relative_loss,	data_received,	latency_min (ms),	latency_max (ms),	latency_mean (ms),	latency_variance (ms),	pub_loop_res_min (ms),	pub_loop_res_max (ms),	pub_loop_res_mean (ms),	pub_loop_res_variance (ms),	sub_loop_res_min (ms),	sub_loop_res_max (ms),	sub_loop_res_mean (ms),	sub_loop_res_variance (ms),	ru_utime,	ru_stime,	ru_maxrss,	ru_ixrss,	ru_idrss,	ru_isrss,	ru_minflt,	ru_majflt,	ru_nswap,	ru_inblock,	ru_oublock,	ru_msgsnd,	ru_msgrcv,	ru_nsignals,	ru_nvcsw,	ru_nivcsw,	cpu_usage (%)
+6.046700,		1.009003,		1972,		3026,		27762,		9.17,		8285372093,		14.66,		222.6,		121,		3.326,		-1.175e+05,		9.223e+12,		4.612e+12,		2.127e+22,		0,		0,		0,		0,		154.1,		6.879,		4063084544,		0,		0,		0,		334514,		3,		0,		0,		0,		227,		94,		0,		45,		970144,		0.004303
+7.048393,		1.001537,		2470,		1534,		11200,		7.30,		10390284548,		25.03,		246.6,		125.4,		2.735,		-1.185e+05,		9.223e+12,		4.615e+12,		2.127e+22,		0,		0,		0,		0,		158.6,		7.099,		4122116096,		0,		0,		0,		362690,		3,		0,		0,		0,		229,		96,		0,		47,		977193,		57.9
+8.058961,		1.010031,		1700,		3788,		22000,		5.81,		7142928956,		16.66,		240.5,		127.5,		3.107,		-1.195e+05,		9.223e+12,		4.61e+12,		2.127e+22,		0,		0,		0,		0,		161.9,		7.224,		4147625984,		0,		0,		0,		371386,		3,		0,		0,		0,		229,		96,		0,		48,		983838,		43.17
+9.059096,		1.000053,		1990,		3404,		46430,		13.64,		8392363892,		15.36,		224.2,		119.3,		3.186,		-1.205e+05,		9.223e+12,		4.613e+12,		2.127e+22,		0,		0,		0,		0,		165.6,		7.37,		4148822016,		0,		0,		0,		381781,		3,		0,		0,		0,		229,		98,		0,		50,		990742,		47.62
+10.068357,		1.009215,		1980,		2844,		22740,		8.00,		8316498932,		15.49,		224.4,		119.8,		3.262,		-1.215e+05,		9.223e+12,		4.61e+12,		2.127e+22,		0,		0,		0,		0,		169.4,		7.538,		4277977088,		0,		0,		0,		397460,		3,		0,		0,		0,		231,		100,		0,		52,		997427,		49.29
+11.077584,		1.009126,		2570,		2279,		24130,		10.59,		10811784409,		14.35,		235.5,		125.4,		2.904,		-1.226e+05,		9.223e+12,		4.614e+12,		2.127e+22,		0,		0,		0,		0,		173.9,		7.726,		4425924608,		0,		0,		0,		406518,		3,		0,		0,		0,		231,		100,		0,		52,		1003337,		58.58
+12.087693,		1.010024,		902,		5470,		55430,		10.13,		3789138372,		15.17,		203.9,		108.8,		2.987,		-1.235e+05,		9.223e+12,		4.612e+12,		2.127e+22,		0,		0,		0,		0,		176.2,		7.799,		4432183296,		0,		0,		0,		406900,		3,		0,		0,		0,		231,		102,		0,		53,		1010646,		28.21

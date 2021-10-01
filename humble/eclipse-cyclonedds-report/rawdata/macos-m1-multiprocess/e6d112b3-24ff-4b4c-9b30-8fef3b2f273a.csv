@@ -1,0 +1,24 @@
+Experiment id: b1fd27e2-4ce4-40d4-8780-41e7e78fe50a
+Performance Test Version: 2fc8cc2-dirty
+Logfile name: e6d112b3-24ff-4b4c-9b30-8fef3b2f273a.csv
+Communication mean: RCLCPP_SINGLE_THREADED_EXECUTOR
+RMW Implementation: rmw_fastrtps_cpp
+DDS domain id: 0
+QOS: Reliability: RELIABLE Durability: VOLATILE History kind: KEEP_LAST History depth: 100 Sync. pub/sub: 0
+Publishing rate: 0
+Topic name: Struct16
+Msg name: Struct16
+Maximum runtime (sec): 30
+Number of publishers: 0
+Number of subscribers: 3
+Memory check enabled: 0
+Use single participant: 0
+With security: 0
+Zero copy transfer: 0
+Roundtrip Mode: NONE
+Ignore seconds from beginning: 5
+
+---EXPERIMENT-START---
+T_experiment,	T_loop,	received,	sent,	lost,	relative_loss,	data_received,	latency_min (ms),	latency_max (ms),	latency_mean (ms),	latency_variance (ms),	pub_loop_res_min (ms),	pub_loop_res_max (ms),	pub_loop_res_mean (ms),	pub_loop_res_variance (ms),	sub_loop_res_min (ms),	sub_loop_res_max (ms),	sub_loop_res_mean (ms),	sub_loop_res_variance (ms),	ru_utime,	ru_stime,	ru_maxrss,	ru_ixrss,	ru_idrss,	ru_isrss,	ru_minflt,	ru_majflt,	ru_nswap,	ru_inblock,	ru_oublock,	ru_msgsnd,	ru_msgrcv,	ru_nsignals,	ru_nvcsw,	ru_nivcsw,	cpu_usage (%)
+6.031728,		1.002062,		262567,		0,		755111,		inf,		8402192,		34.38,		44.59,		40.04,		0.003256,		inf,		-inf,		0,		0,		0,		0,		0,		0,		10.23,		6.486,		23773184,		0,		0,		0,		3747,		3,		0,		0,		0,		16,		32,		0,		30,		2076397,		0.0004434
+7.034433,		1.002625,		262952,		0,		757216,		inf,		8414508,		34.45,		46.55,		39.86,		0.004619,		inf,		-inf,		0,		0,		0,		0,		0,		0,		11.94,		7.546,		23773184,		0,		0,		0,		3747,		3,		0,		0,		0,		18,		36,		0,		34,		2423317,		34.41
