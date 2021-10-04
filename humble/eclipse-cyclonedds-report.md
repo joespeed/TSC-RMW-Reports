@@ -113,7 +113,7 @@ For 569 tests with varying message types, sizes, rates, subscribers, QoS, and pl
 
 ### Cyclone DDS with iceoryx Improvement
 
-Cyclone DDS with built-in iceoryx zero-copy was tested using the rclcpp RMW “LoanedMessage” API. As you can see below Cyclone DDS with iceoryx improves upon Cyclone DDS in every measure: latency, jitter, throughput, memory, total CPU usage, relative CPU per message. Software engineers at ADLINK & Apex.AI followed the other middleware's published instructions to use LoanedMessage API, but the other middleware failed these tests without getting any messages through.
+Cyclone DDS with built-in iceoryx zero-copy was tested using the rclcpp RMW “LoanedMessage” API. As you can see below Cyclone DDS with iceoryx improves upon Cyclone DDS in every measure: latency, jitter, throughput, memory, total CPU usage, relative CPU per message. Software engineers at ADLINK & Apex.AI followed the other middleware's published instructions to use LoanedMessage API, but the other middleware failed these tests without getting any messages through. How to is [here](https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/docs/manual/shared_memory.rst)
 
 
 ![alt_text](eclipse-cyclonedds-report/plots/Ubuntu_latency_mean_zerocopy.png)
