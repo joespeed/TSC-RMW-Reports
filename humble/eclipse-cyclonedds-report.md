@@ -57,7 +57,7 @@ The tests were run again at 30Hz on using the rclcpp RMW LoanedMessage API with 
 
 _Without configuration, how does the implementation scale with the number of topics in the system?_
 
-Cyclone DDS scales well with the number of topics without configuration. These test findings are consistent with those reported to us by iRobot and Tractonomy. Shown below are the effects of scaling the number of topics and nodes on Ubuntu with struct16 messages at 500 Hz on Ubuntu 20.04.3 amd64. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/).
+Cyclone DDS scales well with the number of topics without configuration. These test findings are consistent with those reported to us by iRobot and Tractonomy. Shown below are the effects of scaling the number of topics and nodes with struct16 messages at 500 Hz on Ubuntu 20.04.3 amd64. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/).
 
 <img src="eclipse-cyclonedds-report/plots/scaling_latency_mean_topics.png" width="50%"><img src="eclipse-cyclonedds-report/plots/scaling_jitter_topics.png" width="50%">
 <img src="eclipse-cyclonedds-report/plots/scaling_ram_usage_topics.png" width="50%"><img src="eclipse-cyclonedds-report/plots/scaling_cpu_usage_topics.png" width="50%">
