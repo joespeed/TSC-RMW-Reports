@@ -39,7 +39,7 @@ A large number of tests were run with different combinations of data type, messa
 
 ### Throughput and latency for large messages
 
-_Without configuration, what is the throughput and latency (in addition to any other relevant metrics) when transferring large topics (like ~4K camera images) at medium frequencies (~30Hz)?_
+__Without configuration, what is the throughput and latency (in addition to any other relevant metrics) when transferring large topics (like ~4K camera images) at medium frequencies (~30Hz)?__
 
 Here are 4MB messages at 20Hz. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/).
 
@@ -55,14 +55,14 @@ The tests were run again at 30Hz on using the rclcpp RMW LoanedMessage API with 
 <img src="eclipse-cyclonedds-report/plots/imagetopics_zerocopy_throughput.png" width="50%"><img src="eclipse-cyclonedds-report/plots/imagetopics_zerocopy_ram_usage.png" width="50%">
 <img src="eclipse-cyclonedds-report/plots/imagetopics_zerocopy_cpu_usage.png" width="50%">
 
-_Without configuration, how does the implementation scale with the number of topics in the system?_
+__Without configuration, how does the implementation scale with the number of topics in the system?__
 
 Cyclone DDS scales well with the number of topics without configuration. These test findings are consistent with those reported to us by iRobot and Tractonomy. Shown below are the effects of scaling the number of topics and nodes on Ubuntu with struct16 messages at 500 Hz on Ubuntu 20.04.3 amd64. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/).
 
 <img src="eclipse-cyclonedds-report/plots/scaling_latency_mean_topics.png" width="50%"><img src="eclipse-cyclonedds-report/plots/scaling_jitter_topics.png" width="50%">
 <img src="eclipse-cyclonedds-report/plots/scaling_ram_usage_topics.png" width="50%"><img src="eclipse-cyclonedds-report/plots/scaling_cpu_usage_topics.png" width="50%">
 
-_Without configuration, how does the implementation scale with the number of nodes in the system?_
+__Without configuration, how does the implementation scale with the number of nodes in the system?__
 
 Cyclone DDS scales well with the number of nodes without configuration. In the charts below you see scaling the number of nodes with one topic per node with struct16 messages at 500 Hz on Ubuntu 20.04.3 amd64. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/).
 
@@ -71,7 +71,7 @@ Cyclone DDS scales well with the number of nodes without configuration. In the c
 
 ### General performance
 
-_Please provide benchmarks for inter-host, inter-process (with and without LoanedMessages), and intra-process (with and without LoanedMessages) throughput for both large and small message sizes, on both Linux and Windows._
+__Please provide benchmarks for inter-host, inter-process (with and without LoanedMessages), and intra-process (with and without LoanedMessages) throughput for both large and small message sizes, on both Linux and Windows.__
 
 Following is the summary overview of the results for all tests, all platforms. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/). Also see [Appendix B: Performance Summary Per Platform](#appendix-b-performance-summary-per-platform).
 
@@ -150,21 +150,21 @@ Inter-host test detailed plots are [here](eclipse-cyclonedds-report/plots), and 
 
 ![alt_text](eclipse-cyclonedds-report/plots/Ubuntu-inter-host_cpu_usage.png)
 
-_For a pub/sub pair in separate processes, what is the average round-trip time, throughput, and CPU/memory utilization? How does this scale with topic frequency and topic size?_
+__For a pub/sub pair in separate processes, what is the average round-trip time, throughput, and CPU/memory utilization? How does this scale with topic frequency and topic size?__
 
 Multi-process test results are covered elsewhere in this report, the plots are [here](eclipse-cyclonedds-report/plots), the test scripts, raw data, tabulated data are [here](eclipse-cyclonedds-report/).
 
 
 ## Services
 
-_Several users have reported instances where services never appear, or they never get responses. What do you think the problems might be, and what are you doing to try and address these problems?_
+__Several users have reported instances where services never appear, or they never get responses. What do you think the problems might be, and what are you doing to try and address these problems?__
 
 
-* _[ros2/ros2/issues/1074](https://github.com/ros2/ros2/issues/1074)_
-* _[ros2/rmw_fastrtps/issues/392](https://github.com/ros2/rmw_fastrtps/issues/392)_
-* _[ros2/rmw_fastrtps/pull/418](https://github.com/ros2/rmw_fastrtps/pull/418)_
-* _[ros2/rmw_cyclonedds/issues/74](https://github.com/ros2/rmw_cyclonedds/issues/74)_
-* _[ros2/rmw_cyclonedds/issues/191](https://github.com/ros2/rmw_cyclonedds/issues/191)_
+* __[ros2/ros2/issues/1074](https://github.com/ros2/ros2/issues/1074)__
+* __[ros2/rmw_fastrtps/issues/392](https://github.com/ros2/rmw_fastrtps/issues/392)__
+* __[ros2/rmw_fastrtps/pull/418](https://github.com/ros2/rmw_fastrtps/pull/418)__
+* __[ros2/rmw_cyclonedds/issues/74](https://github.com/ros2/rmw_cyclonedds/issues/74)__
+* __[ros2/rmw_cyclonedds/issues/191](https://github.com/ros2/rmw_cyclonedds/issues/191)__
 
 The only referenced issues are timing-related and tickets left open for the day things change and some code to work around missing guarantees in the DDS discovery protocol can be removed. Starting with the latter, since the introduction of that in the RMW layer in June 2020, we have not received any reports of missing service responses, and we believe this to be reliable. The main downside is that it can delay the service on servicing the first request from a given client by the discovery latency if that client initiates the request immediately upon discovering the service.
 
@@ -176,7 +176,7 @@ So the observed behaviour is in line with expectations. We do intend to provide 
 
 The longish recovery delay when the final message before the writer falls silent for a while is something that we would like to improve on. It necessarily involves waiting on a timer and sending additional packets, and is thus not likely to ever recover in less than a few milliseconds. On WiFi the delays will necessarily be longer because WiFi has a relatively high intrinsic latency.
 
-* _How do services scale with the number of clients? And/or the amount of request traffic?_
+__How do services scale with the number of clients? And/or the amount of request traffic?__
 
 Client/service interaction is implemented using a pair of topics, following the existing design for services at the time of implementing the Cyclone DDS RMW layer. That means each client and each server introduces two endpoints. The standard discovery protocol requires these to be advertised to all other processes in the network. At the level of DDS discovery, each additional client causes an amount of work/traffic that scales linearly with the size of the system.
 
@@ -189,14 +189,14 @@ The intent has always been to start using writer-side content filtering once tha
 
 ## WiFi
 
-_We’ve had a lot of reports from users of problems using ROS 2 over WiFi. What do you think the causes of the problems are, and what are you doing to try to address these problems?_
+__We’ve had a lot of reports from users of problems using ROS 2 over WiFi. What do you think the causes of the problems are, and what are you doing to try to address these problems?__
 
 
 
-* _Some example issues from users:_
-    * _[Bad performance of ROS 2 via WiFi](https://answers.ros.org/question/362065/bad-performance-of-ros2-via-wifi/)_
-    * _[ROS 2 default behavior on WIFi](https://discourse.ros.org/t/ros2-default-behavior-wifi/13460/38)_
-    * _[Bad networks dragging down localhost communication](https://discourse.ros.org/t/bad-networks-dragging-down-localhost-communication/20611)_
+* __Some example issues from users:__
+    * __[Bad performance of ROS 2 via WiFi](https://answers.ros.org/question/362065/bad-performance-of-ros2-via-wifi/)__
+    * __[ROS 2 default behavior on WIFi](https://discourse.ros.org/t/ros2-default-behavior-wifi/13460/38)__
+    * __[Bad networks dragging down localhost communication](https://discourse.ros.org/t/bad-networks-dragging-down-localhost-communication/20611)__
 
 The challenges of DDS when operating over WiFi are relatively well known to those that have been  involved with DDS for sufficiently long time. The main causes of these challenges are related (1) the fact that DDS heavily relies on UDP/IP multicast communication which is know to be problematic on WiFi, (2) the verbosity of DDS discovery protocol, and (3) the lossy nature of WiFi. 
 
@@ -205,7 +205,7 @@ In order to alleviate these and other challenges posed by DDS when trying to sca
 Below we describe how zenoh can be transparently used by ROS2 applications to improve their behaviour over WiFi and in general to have better scalability as well as transparently operate at Internet scale.
 
 
-* _How well does the implementation work out-of-the-box over WiFi?_
+__How well does the implementation work out-of-the-box over WiFi?__
 
 Cyclone DDS over WiFi "just works" unless the WiFi is reached via a wired network. Because whether or not the selected interface is a wifi interface determines whether Cyclone DDS uses `allowmulticast=true` or `allowmulticast=spdp` (multicast discover, unicast data).
 
@@ -223,14 +223,14 @@ Zenoh’s default configuration has been proven to reduce DDS discovery traffic 
 
 
 
-* _How does the system behave when a robot leaves WiFi range and then reconnects?_
+__How does the system behave when a robot leaves WiFi range and then reconnects?__
 
 With Cyclone DDS this behaves the same as well as others. With [zenoh-plugin-dds](https://github.com/eclipse-zenoh/zenoh-plugin-dds) the disruption of a temporary out-of-range WiFi link is quickly resolved once the connection is re-established. As the level of discovery information shared by the zenoh protocol is extremely small when compared to DDS, and much of the information exchanged by DDS is not even necessary, the communication is re-established immediately without inundating the network with discovery data as in the DDS case.
 
 The disruption of a temporary out of range WiFi link is quickly resolved once the connection is re-established. As the level of discovery information shared by the zenoh protocol in extremely small when compared to DDS, and much of the information exchanged by DDS is not even necessary, the communication is re-established immediately without inundating the network with discovery data as in the DDS case.
 
 
-* _How long does it take to launch a large application like RViz2 over WiFi?_
+__How long does it take to launch a large application like RViz2 over WiFi?__
 
 Cyclone DDS and other RMW both launch large applications like RViz2 over WiFi in the same amount of time. Rover Robotics has done much testing of [Nav2 bring up with RViz2 over WiFi](https://youtu.be/k7ogOKzgRFw).
 
@@ -238,13 +238,13 @@ This question really depends on the network and the complexity of the robot. How
 
 
 
-* _What is a solution for default DDS discovery on lossy networks?_
+__What is a solution for default DDS discovery on lossy networks?__
 
 Leveraging the [zenoh-plugin-dds](https://github.com/eclipse-zenoh/zenoh-plugin-dds) addresses the problem of lossy networks where it does not leverage multicast, and the protocol is extremely parsimonious and wire efficient. [Here is overview and tutorial](https://zenoh.io/blog/2021-04-28-ros2-integration/) using ROS 2 turtlebot. This plugin is in the next Rolling sync.
 
 
 
-* _How does performance scale with the number of robots present in a WiFi network?_
+__How does performance scale with the number of robots present in a WiFi network?__
 
 In DDS, the discovery data is sent from everyone to everyone else in spite of actual interest. Additionally, DDS shares discovery data for readers / writers and topics. As tested by iRobot, Cyclone DDS scales well. Additionally, Erik Boasson added _domainTag_ to the OMG DDSI 2.3 specification to support implementing iRobot’s use case - [find any Roomba by serial number](https://static1.squarespace.com/static/51df34b1e4b08840dcfd2841/t/5e60b8674ae5d240e8dc4219/1583396998832/ROS-I+2019+Eclipse+Cyclone+DDS+-+Joe+Speed+-+low+rez.pdf) among ~1,000 robots on the network.
 
@@ -255,31 +255,31 @@ Thus the improved scalability provided by the zenoh-plugin-dds over DDS is a con
 
 ## Features
 
-* _What is the roadmap and where is it documented?_
+__What is the roadmap and where is it documented?__
 
 The Cyclone DDS + iceoryx joint roadmap is here: [Apex.Middleware](https://www.apex.ai/apex-middleware). Here are the stand-alone roadmaps for [Eclipse Cyclone DDS](https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/ROADMAP.md), [Eclipse iceoryx](https://projects.eclipse.org/projects/technology.iceoryx), and [Eclipse Zenoh](https://github.com/eclipse-zenoh/zenoh/wiki/2021).
 
-* _Can the middleware be configured to be memory-static at runtime?_
+__Can the middleware be configured to be memory-static at runtime?__
 
 No, however the design and architecture of the middleware components do not prevent them from being hardened to be memory-static at runtime. Currently performance is paramount over being memory-static at runtime. In addition, through proper configuration of Cyclone DDS and iceoryx, runtime allocations can be avoided in many places (through the use of upper-bounded messages, and using zero copy where appropriate).
 
-* _What support is there for microcontrollers?_
+__What support is there for microcontrollers?__
 
 Zenoh-pico (see [eclipse-zenoh/zenoh-pico](https://github.com/eclipse-zenoh/zenoh-pico)) supports micro-controllers such as STM32, ESP32, and the Zephyr OS reference board, namely the reel board. Zenoh-pico supports micro-ROS with [rmw_zenoh_pico_cpp](https://github.com/atolab/rmw_zenoh/tree/main/rmw_zenoh_pico_cpp). Zenoh-pico uses the Zenoh ROS 2 DDS plugin [zenoh-plugin-dds](https://github.com/eclipse-zenoh/zenoh-plugin-dds/blob/master/README.md) which works with all Tier 1 ROS Middleware and is in next ROS 2 Rolling sync. Zenoh-pico overview and step-by-step "how to" instructions are [here](https://zenoh.io/blog/2021-10-04-zenoh-pico-guide/). Instructions for ROS 2 with Zenoh are [here](https://zenoh.io/blog/2021-04-28-ros2-integration/). Instructions for using Cyclone DDS with Zenoh on constrained networks are [here](https://zenoh.io/blog/2021-09-28-iac-experiences-from-the-trenches/). 
 
-* _Are there tools available for integrating/bridging with other protocols (MQTT, etc)? What are they, and how do they work?_
+__Are there tools available for integrating/bridging with other protocols (MQTT, etc)? What are they, and how do they work?__
 
 Yes. The provided simple APIs and multiple language bindings facilitate integration/bridging with other protocols via Eclipse Cyclone DDS [sister projects](iot.eclipse.org/projects) Eclipse Paho (MQTT), Eclipse Milo (OPC-UA), Eclipse Tahu (legacy SCADA/DCS/ICS), Eclipse Californium (COAP), et al. Cyclone DDS’s 37 sister projects are listed here [iot.eclipse.org/projects](https://iot.eclipse.org/projects/) 
 
-* _How much adherence is there to the RTPS standard?_
+__How much adherence is there to the RTPS standard?__
 
 Full adherence with one exception; for interoperability with the other middleware, Cyclone DDS has been modified accept some invalid messages that the other ROS middleware sends despite the RTPS specification demanding that those be ignored.
 
-* _How much support for the DDS-Security specification is provided in the DDS implementation?_
+__How much support for the DDS-Security specification is provided in the DDS implementation?__
 
 DDS-Security specification support is described [here](https://cyclonedds.io/docs/cyclonedds/latest/security.html). The three plugins that comprise the DDS Security Model in Cyclone DDS are: Authentication Service Plugin; Access Control Service Plugin; Cryptographic Service Plugin. Cyclone DDS implements (or interfaces with libraries that implement) all cryptographic operations including encryption, decryption, hashing, digital signatures, etc. This includes the means to derive keys from a shared secret.
 
-* _Does the package have explicit tooling and support for protocol dissection?_
+__Does the package have explicit tooling and support for protocol dissection?__
 
 Yes. [Wireshark](https://www.wireshark.org), [performance_test](https://gitlab.com/ApexAI/performance_test/), and [ddsperf](https://github.com/eclipse-cyclonedds/cyclonedds#performance). Please refer to the [cyclonedds.io/docs](https://cyclonedds.io/docs), [performance_test](https://gitlab.com/ApexAI/performance_test/-/blob/master/README.md), and the  [“Debugging”](https://github.com/ros2/rmw_cyclonedds/blob/master/README.md) section of rmw_cyclonedds readme. The Wireshark DDSI-RTPS plugin is [here](https://www.wireshark.org/docs/dfref/r/rtps2.html).
 
@@ -292,19 +292,19 @@ Yes. [Wireshark](https://www.wireshark.org), [performance_test](https://gitlab.c
 
 ## Quality
 
-* _What is the currently self-declared REP-2004 quality of the package implementing the RTPS/DDS protocols and the RMW?_
+__What is the currently self-declared REP-2004 quality of the package implementing the RTPS/DDS protocols and the RMW?__
 
 Cyclone DDS and iceoryx are self-declared to be Quality Level 2 [here](https://github.com/eclipse-cyclonedds/cyclonedds/compare/master...eboasson:ql2declaration?expand=1) and [here](https://github.com/eclipse-iceoryx/iceoryx/blob/master/QUALITY_DECLARATION.md).
 
-* _How else does the package measure quality? Please list specific procedures or tools that are used._
+__How else does the package measure quality? Please list specific procedures or tools that are used.__
 
 [Eclipse Foundation Development Process](https://www.eclipse.org/projects/dev_process/) has been refined over the course of hundreds of projects to produce high quality software. The development process also addresses project lifecycle, reviews, releases and grievances. Automated quality testing includes CI, test coverage, static code analysis, integration tests, and sanitizer tests as described in the report section “_What kinds of tests are run?_” further below. Project documentation besides the READMEs is found here: [cyclonedds.io/docs](https://cyclonedds.io/docs), [iceoryx.io](https://iceoryx.io), [zenoh.io](https://zenoh.io) and [blog](https://zenoh.io/blog/2021-09-28-iac-experiences-from-the-trenches/).
 
-* _Where is the development process documented?_
+__Where is the development process documented?__
 
 These projects follow the [Eclipse Foundation Development Process](https://www.eclipse.org/projects/dev_process/). It documents the development process used by hundreds of Eclipse Foundation projects including Cyclone DDS, iceoryx and Zenoh. In addition, the contributing guidelines are documented here for [Cyclone DDS](https://github.com/eclipse-cyclonedds/cyclonedds/blob/master/CONTRIBUTING.md), [iceoryx](https://github.com/eclipse-iceoryx/iceoryx/blob/master/CONTRIBUTING.md) and [Zenoh](https://github.com/eclipse-zenoh/zenoh/blob/master/CONTRIBUTING.md). Note that [Eclipse Foundation Development Process](https://www.eclipse.org/projects/dev_process/) results in contributions being a smaller number of larger and thoroughly tested chunks. This means that looking at the number of commits instead of number of pull requests is a more appropriate way to evaluate the liveliness of any Eclipse project including these. 
 
-* _What kinds of tests are run? Smoke tests, unit tests, integration tests, load tests, coverage? What platforms are each of the tests run on?_
+__What kinds of tests are run? Smoke tests, unit tests, integration tests, load tests, coverage? What platforms are each of the tests run on?__
 
 The following kinds of tests are run:
 
@@ -317,7 +317,7 @@ The following kinds of tests are run:
 
 Additionally, Open Robotics runs the [full ROS 2 test suite](https://build.ros2.org) with Cyclone DDS nightly.
 
-* _Has the DDS Security implementation been audited by a third-party?_
+__Has the DDS Security implementation been audited by a third-party?__
 
 Yes. [Trend Micro security researchers](https://www.trendmicro.com/en_us/about/threat-research.html) working on security vulnerability research audit Eclipse Cyclone DDS with Eclipse iceoryx. These security researchers perform [fuzz testing](https://en.wikipedia.org/wiki/Fuzzing) of Cyclone DDS with icoeryx to test for security vulnerabilities. They are automating the vulnerability searches.
 
