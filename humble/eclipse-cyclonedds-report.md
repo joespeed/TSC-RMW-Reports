@@ -298,7 +298,7 @@ Cyclone DDS and iceoryx are self-declared to be Quality Level 2 [here](https://g
 
 * _How else does the package measure quality? Please list specific procedures or tools that are used._
 
-[Eclipse Foundation Development Process](https://www.eclipse.org/projects/dev_process/) has been refined over the course of hundreds of projects to produce high quality software. The development process also addresses project lifecycle, reviews, releases and grievances. Automated quality testing includes CI, test coverage, static code analysis, integration tests, and sanitizer tests as described in the report section “_What kinds of tests are run?_” further below. Project documentation besides the READMEs is found here: [cyclonedds.io/docs](https://cyclonedds.io/docs), [iceoryx.io](https://iceoryx.io), [zenoh.io](https://zenoh.io) and [blog](https://zenoh.io/blog/2021-09-28-iac-experiences-from-the-trenches/)).
+[Eclipse Foundation Development Process](https://www.eclipse.org/projects/dev_process/) has been refined over the course of hundreds of projects to produce high quality software. The development process also addresses project lifecycle, reviews, releases and grievances. Automated quality testing includes CI, test coverage, static code analysis, integration tests, and sanitizer tests as described in the report section “_What kinds of tests are run?_” further below. Project documentation besides the READMEs is found here: [cyclonedds.io/docs](https://cyclonedds.io/docs), [iceoryx.io](https://iceoryx.io), [zenoh.io](https://zenoh.io) and [blog](https://zenoh.io/blog/2021-09-28-iac-experiences-from-the-trenches/).
 
 * _Where is the development process documented?_
 
