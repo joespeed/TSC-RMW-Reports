@@ -48,7 +48,7 @@ The length of the response to all of the questions combined should be no more th
 If additional space is needed, feel free to provide a link to an external resource with more information.
 
 ### Performance
-* Without configuration, what is the throughput and latency (in addition to any other relevant metrics) when transferring large topics (like ~4K camera images) at medium frequencies (~30Hz)?
+* **_Without configuration, what is the throughput and latency (in addition to any other relevant metrics) when transferring large topics (like ~4K camera images) at medium frequencies (~30Hz)?_**
 
 * Without configuration, how does the implementation scale with the number of topics in the system?
 
