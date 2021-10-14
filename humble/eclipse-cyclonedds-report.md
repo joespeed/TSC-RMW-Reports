@@ -44,6 +44,10 @@ _Without configuration, what is the throughput and latency (in addition to any o
 Here are 4MB messages at 20Hz. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/).
 
 ![test image size](eclipse-cyclonedds-report/plots/imagetopic_latency_mean.png){:height="50%" width="50%"}
+
+![](eclipse-cyclonedds-report/plots/imagetopic_latency_mean.png?v=4&s=50)
+end test
+
 <img src="eclipse-cyclonedds-report/plots/imagetopic_latency_mean.png" width="50%"><img src="eclipse-cyclonedds-report/plots/imagetopic_jitter.png" width="50%">
 <img src="eclipse-cyclonedds-report/plots/imagetopic_throughput.png" width="50%"><img src="eclipse-cyclonedds-report/plots/imagetopic_ram_usage.png" width="50%">
 <img src="eclipse-cyclonedds-report/plots/imagetopic_cpu_usage.png" width="50%">
