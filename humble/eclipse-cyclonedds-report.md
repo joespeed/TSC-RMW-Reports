@@ -43,14 +43,9 @@ _Without configuration, what is the throughput and latency (in addition to any o
 
 Here are 4MB messages at 20Hz. How to instructions, test scripts, raw data, tabulated data, tabulation scripts, plotting scripts and detailed test result PDFs for every individual test are [here](eclipse-cyclonedds-report/).
 
-![test image size](eclipse-cyclonedds-report/plots/imagetopic_latency_mean.png){:height="50%" width="50%"}
-
-![](eclipse-cyclonedds-report/plots/imagetopic_latency_mean.png?v=4&s=50)
-end test
-
-<img src="eclipse-cyclonedds-report/plots/imagetopic_latency_mean.png" width="50%"><img src="eclipse-cyclonedds-report/plots/imagetopic_jitter.png" width="50%">
-<img src="eclipse-cyclonedds-report/plots/imagetopic_throughput.png" width="50%"><img src="eclipse-cyclonedds-report/plots/imagetopic_ram_usage.png" width="50%">
-<img src="eclipse-cyclonedds-report/plots/imagetopic_cpu_usage.png" width="50%">
+<img src="eclipse-cyclonedds-report/plots/imagetopic_latency_mean.png" width="650"><img src="eclipse-cyclonedds-report/plots/imagetopic_jitter.png" width="650">
+<img src="eclipse-cyclonedds-report/plots/imagetopic_throughput.png" width="650"><img src="eclipse-cyclonedds-report/plots/imagetopic_ram_usage.png" width="650">
+<img src="eclipse-cyclonedds-report/plots/imagetopic_cpu_usage.png" width="650">
 
 Note: Regarding Cyclone DDS CPU usage reporting as “0.0%” for Windows 10, the resolution of the timing was such that the measurement is below the threshold. The CPU usage on Windows 10 was probably similar to the Ubuntu results, but we simply couldn’t measure it in this test run.
 
